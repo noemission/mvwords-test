@@ -17,8 +17,8 @@ Getting up and running is as easy as 1, 2, 3.
     cd path/to/mvwords-test
     npm install
     ```
-
-3. Start your app
+3. Make sure you have MongoDB running at port 27017 
+4. Start your app
 
     ```
     npm start
@@ -28,18 +28,12 @@ Getting up and running is as easy as 1, 2, 3.
 
 Simply run `npm test` and all your tests in the `test/` directory will be run.
 
-## Scaffolding
+## Features
 
-Feathers has a powerful command line interface. Here are a few things it can do:
+* User authentication
+* Short url creation for users and guests
+* Short url redirection at `/{shortCode}`
+* Short url stats with permissions at `/{shortCode}/stats`
+    * Stats for urls created by guests are publicly available
+    * Stats for private urls are only available to the user created them
 
-```
-$ npm install -g @feathersjs/cli          # Install Feathers CLI
-
-$ feathers generate service               # Generate a new Service
-$ feathers generate hook                  # Generate a new Hook
-$ feathers help                           # Show all commands
-```
-
-## Help
-
-For more information on all the things you can do with Feathers visit [docs.feathersjs.com](http://docs.feathersjs.com).
